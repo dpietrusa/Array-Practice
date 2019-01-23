@@ -38,7 +38,7 @@ public class Main {
         double avgTemp1 = userInput.nextDouble();
         dailyAverageTemp[1] = avgTemp1;
 
-        double avgTempCelsius1 = ((dailyAverageTemp[0] - 32) / 1.8);
+        double avgTempCelsius1 = ((dailyAverageTemp[1] - 32) / 1.8);
         dailyAverageTempCelsius[1] = avgTempCelsius1;
 
 
@@ -48,7 +48,7 @@ public class Main {
         double avgTemp2 = userInput.nextDouble();
         dailyAverageTemp[2] = avgTemp2;
 
-        double avgTempCelsius2 = ((dailyAverageTemp[0] - 32) / 1.8);
+        double avgTempCelsius2 = ((dailyAverageTemp[2] - 32) / 1.8);
         dailyAverageTempCelsius[2] = avgTempCelsius2;
 
 
@@ -58,7 +58,7 @@ public class Main {
         double avgTemp3 = userInput.nextDouble();
         dailyAverageTemp[3] = avgTemp3;
 
-        double avgTempCelsius3 = ((dailyAverageTemp[0] - 32) / 1.8);
+        double avgTempCelsius3 = ((dailyAverageTemp[3] - 32) / 1.8);
         dailyAverageTempCelsius[3] = avgTempCelsius3;
 
 
@@ -68,7 +68,7 @@ public class Main {
         double avgTemp4 = userInput.nextDouble();
         dailyAverageTemp[4] = avgTemp4;
 
-        double avgTempCelsius4 = ((dailyAverageTemp[0] - 32) / 1.8);
+        double avgTempCelsius4 = ((dailyAverageTemp[4] - 32) / 1.8);
         dailyAverageTempCelsius[4] = avgTempCelsius4;
 
 
@@ -78,7 +78,7 @@ public class Main {
         double avgTemp5 = userInput.nextDouble();
         dailyAverageTemp[5] = avgTemp5;
 
-        double avgTempCelsius5 = ((dailyAverageTemp[0] - 32) / 1.8);
+        double avgTempCelsius5 = ((dailyAverageTemp[5] - 32) / 1.8);
         dailyAverageTempCelsius[5] = avgTempCelsius5;
 
 
@@ -88,20 +88,15 @@ public class Main {
         double avgTemp6 = userInput.nextDouble();
         dailyAverageTemp[6] = avgTemp6;
 
-        double avgTempCelsius6 = ((dailyAverageTemp[0] - 32) / 1.8);
+        double avgTempCelsius6 = ((dailyAverageTemp[6] - 32) / 1.8);
         dailyAverageTempCelsius[6] = avgTempCelsius6;
 
 
-        //for(int i=0; i<dailyAverageTemp.length; i++) {
-            //int dayIncrement = i;
 
         for (int i: daysOfWeek) {
-
-
-
-            System.out.println("Day " + i + " Average temperature is " + dailyAverageTemp[i] + " Fahrenheit, or "+ dailyAverageTempCelsius[i] + " Celsius!");
+            int x = i-1;
+            System.out.println("Day " + i + " Average temperature is " + dailyAverageTemp[x] + " Fahrenheit, or "+ dailyAverageTempCelsius[x] + " Celsius!");
         }
-
 
 
 
