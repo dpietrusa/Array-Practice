@@ -134,18 +134,32 @@ public class Main {
         //dailyAverageTempCelsius[6] = avgTempCelsius6;
 
 
-
-        for (int i: daysOfWeek) {
-            int x = i-1;
-            System.out.println("Day " + i + " Average temperature is " + dailyAverageTemp[x] + " Fahrenheit, or "+ dailyAverageTempCelsius[x] + " Celsius!");
-        }
-
-
+        System.out.println("Display results in 1-Fahrenheit or 2-Celsius?");
+        int results = userInput.nextInt();
 
         double sum = (dayOne.getTempFahrenheit() + dayTwo.getTempFahrenheit() + dayThree.getTempFahrenheit() + dayFour.getTempFahrenheit() + dayFive.getTempFahrenheit() + daySix.getTempFahrenheit() + daySeven.getTempFahrenheit());
         double sumCelsius = (dayOne.convertToCelsius() + dayTwo.convertToCelsius() + dayThree.convertToCelsius()  + dayFour.convertToCelsius() + dayFive.convertToCelsius() + daySix.convertToCelsius() + daySeven.convertToCelsius());
 
-        System.out.println("The weekly average of the temperatures you entered is " + sum / dailyAverageTemp.length + " degrees Fahrenheit, or " + sumCelsius / dailyAverageTempCelsius.length + " Celsius!");
+                if (results == 1) {
+                    for (int i: daysOfWeek) {
+                        int x = i-1;
+                        System.out.println("Day " + i + " Average temperature is " + dailyAverageTemp[x] + " degrees Fahrenheit!");
+                    }
+                    System.out.println("The weekly average of the temperatures you entered is " + sum / dailyAverageTemp.length + " degrees Fahrenheit!");
+
+                } else if (results == 2) {
+                    for (int i: daysOfWeek) {
+                        int x = i-1;
+                        System.out.println("Day " + i + " Average temperature is " + dailyAverageTempCelsius[x] + " degrees Celsius!");
+                    }
+                    System.out.println("The weekly average of the temperatures you entered is " + sumCelsius / dailyAverageTempCelsius.length + " degrees Celsius!");
+
+                } else {
+                    System.out.println("Please enter either 1 for Fahrenheit or 2 for Celsius :)");
+                }
+
+
+
 
 
 
