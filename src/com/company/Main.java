@@ -16,7 +16,7 @@ public class Main {
 
     Scanner userInput = new Scanner(System.in)  ;
 
-    double[] dailyAverageTemp = new double[6];
+    double[] dailyAverageTemp = new double[7];
 
 
 
@@ -68,7 +68,16 @@ public class Main {
 
         dailyAverageTemp[6] = avgTemp6;
 
-        
+
+        for(int i=0; i<dailyAverageTemp.length; i++) {
+            System.out.println(dailyAverageTemp[i]);
+        }
+
+        double sum = (avgTemp0 + avgTemp1 + avgTemp2 + avgTemp3 + avgTemp4 + avgTemp5 + avgTemp6);
+        System.out.println("The weekly average of the temperatures you entered is " + sum / dailyAverageTemp.length);
+
+
+
 
 
 
